@@ -1,5 +1,5 @@
 
-<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr-raw/RahulVadisetty91/HelloWorld>
+<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr-raw/RahulVadisetty91/HelloWorld?branch=master">
 
 
 
