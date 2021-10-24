@@ -3,7 +3,7 @@ public class Java8Tester {
       Java8Tester tester = new Java8Tester();
 		
       
-      //with parenthesis
+      //with parenthesis and Java 11
       GreetingService greetService1 = message ->
       System.out.println("Hello " + message);
 		
