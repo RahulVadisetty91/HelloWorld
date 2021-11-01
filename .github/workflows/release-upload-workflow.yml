@@ -22,8 +22,8 @@ jobs:
     - uses: dsaltares/fetch-gh-release-asset@master
       with:
         repo: "${{ github.repository }}"
-        file: "${{ steps.vars.outputs.tag }}.zip"
-        target: "helloWorldReleast.zip"
+        file: "RUNNING.txt"
+        target: "sample.txt"
         token: ${{ secrets.GITHUB_TOKEN }} 
     
     - name: Display download directory
@@ -33,7 +33,7 @@ jobs:
     - name: Upoad Release asset to JFrog
       id: uploadToJFrog
       run: |
-        export jfrogStatus=`curl -u "tilakkalyan@gmail.com:Itsme148!" -X PUT -T helloWorldReleast.zip -s https://itsme.jfrog.io/artifactory/default-maven-virtual/release-asset.zip`
+        export jfrogStatus=`curl -u "tilakkalyan@gmail.com:Itsme148!" -X PUT -T sample.txt -s https://itsme.jfrog.io/artifactory/default-maven-virtual/sample.txt`
         echo "JFrog Status= ${jfrogStatus}"
         
         
