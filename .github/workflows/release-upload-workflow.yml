@@ -30,11 +30,12 @@ jobs:
       run: | 
           ls -R
           
-    - name: publish to artifactory
-      uses: advancedcsg-open/action-jfrog-cli@master
-      with:
-        url: 'https://itsme.jfrog.io/'
-        credentials type: 'username'
-        user: 'tilakkalyan@gmail.com'
-        password: 'Itsme148!'
-        args: u "release-asset.zip" "/artifactory/default-maven-virtual/" 
+    - name: Upoad Release asset to JFrog
+      id: uploadToJFrog
+      run: |
+        export RELEASE_NAME=`curl -sSf -u "tilakkalyan@gmail.com:Itsme148!" \-X PUT \-T release-asset.zip \'https://itsme.jfrog.io/artifactory/default-maven-virtual/release-asset.zip'`
+        echo "JFrog Status= ${jfrogStatus}"
+        
+        
+        
+        
