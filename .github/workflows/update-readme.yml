@@ -1,0 +1,15 @@
+on: push
+
+jobs:
+  checkstyle_job:
+    runs-on: ubuntu-latest
+    env:
+        GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    name: Checkstyle job
+    steps:
+    - name: Update GitHub Profile README
+      uses: theboi/github-update-readme@master
+      with:
+        header: "Hey, I'm Ryan! 👋"
+        subhead: "Currently a student in Singapore, passionate about creating all-things-tech to improve society."
+        footer: "**Learn more about me at [ryanthe.com](https://www.ryanthe.com)!**"
