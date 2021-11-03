@@ -1,6 +1,6 @@
-## Hey, I'm Ryan! 👋
+## Hey, I'm badge! 👋
 
-Currently a student in Singapore, passionate about creating all-things-tech to improve society.
+Badge Creater
 
 ---
 
