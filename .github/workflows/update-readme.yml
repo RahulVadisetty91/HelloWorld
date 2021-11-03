@@ -8,7 +8,9 @@ jobs:
     name: Checkstyle job
     steps:
     - name: Update GitHub Profile README
-      uses: theboi/github-update-readme@master
+      uses: theboi/github-update-readme@v1.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         header: "Hey, I'm Ryan! 👋"
         subhead: "Currently a student in Singapore, passionate about creating all-things-tech to improve society."
