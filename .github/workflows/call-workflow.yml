@@ -1,4 +1,21 @@
+name: Reusable workflow example
+
+on:
+  workflow_call:
+   inputs:
+      username:
+         type: string
 jobs:
+  example_job:
+    name: Pass input and secrets to my-action
+    runs-on: ubuntu-latest
+    steps:
+      - id: step1
+      - run: |
+          echo "inputs.allowed_features: ${{ inputs.username }}"
+          echo "env.INPUT_ALLOWED_FEATURES: ${{ env.INPUT_ALLOWED_FEATURES }}"
+        shell: bash
+        
   call-workflow-passing-data:
     uses: RahulVadisetty91/HelloWorld/.github/workflows/call-workflow.yml@main
     with:
