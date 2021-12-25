@@ -2,7 +2,10 @@ name: Reusable workflow example
 
 on:
   push:
-
+  workflow_dispatch:
+   inputs:
+      username:
+         type: string  
   workflow_call:
    inputs:
       username:
